@@ -1,3 +1,6 @@
+body{
+    font-family:"Segoe UI";
+}
 .shapka{
     background: #F4E8D3;
     height: 200px;
@@ -7,10 +10,36 @@
 }
 .main{
     letter-spacing: 1px;
-    line-height: 25px;
+
 }
-.list{
+.list {
     border: 1px solid black;
-
+  margin-top: 20px;
+    padding: 10px;
+}
+.name{
+    font-size: 25px;
 }
 
+.bt1{
+    width: 220px;
+    height: 50px;
+    background: #67BA80;
+    border: #67BA80;
+    border-radius:10px ;
+    color:#F4E8D3  ;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.bt2{
+    width: 280px;
+    height: 50px;
+    background: #67BA80;
+    border: #67BA80;
+    border-radius:10px ;
+    color:#F4E8D3  ;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}

@@ -8,7 +8,7 @@ Route::get('/partners', [PartnerController::class, 'index'])->name('partners.ind
 Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create'); // Форма создания
 Route::post('/partners/create', [PartnerController::class, 'store'])->name('partners.store'); // Сохранение нового
 Route::get('/partners/edit/{partner}', [PartnerController::class, 'edit'])->name('partners.edit'); // Форма редактирования
-Route::put('/partners/edit/{partner}', [PartnerController::class, 'edit'])->name('partners.update'); // Редактирования
+Route::post('/partners/edit/{partner}', [PartnerController::class, 'update'])->name('partners.update'); // Редактирования
 
 
 

@@ -24,14 +24,21 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'partner_type_id'=> 'required|integer|exists:partner_types,id',
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:partners',
+            'email' => 'required|email|',
+            'director'=> 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'rating' => 'required|integer|min:0|max:10',
+            'inn' => 'required|string|max:255',
+
             // ... другие правила валидации
         ]);
 
         $partner = Partner::create($validated);
 
-        return redirect()->route('partners.show', $partner)
+        return redirect()->route('partners.index', $partner)
             ->with('success', 'Партнер успешно создан');
     }
 
@@ -50,15 +57,21 @@ class PartnerController extends Controller
     // Обновление данных
     public function update(Request $request, Partner $partner)
     {
+
         $validated = $request->validate([
+            'partner_type_id'=> 'required|integer|exists:partner_types,id',
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:partners,email,'.$partner->id,
-            // ... другие правила валидации
+            'email' => 'required|email|',
+            'director'=> 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'rating' => 'required|integer|min:0|max:10',
+            'inn' => 'required|string|max:255',
         ]);
 
         $partner->update($validated);
 
-        return redirect()->route('partners.show', $partner)
+        return redirect()->route('partners.index')
             ->with('success', 'Данные партнера обновлены');
     }
 

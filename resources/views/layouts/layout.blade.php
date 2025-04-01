@@ -12,15 +12,19 @@
 
 <header class="shapka">
     <div class="logo">
+
         <img src="{{asset('assets/images/avatarka.png')}}" alt="ava" width="100" >
     </div>
 </header>
 <main class="main">
+
     @yield('content')
 
+
 </main>
+
 <footer>
-    тут подвал
+   тут домра
 </footer>
 
 
