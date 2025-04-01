@@ -1,0 +1,16 @@
+.shapka{
+    background: #F4E8D3;
+    height: 200px;
+}
+.logo img{
+   margin: 50px;
+}
+.main{
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.list{
+    border: 1px solid black;
+
+}
+
